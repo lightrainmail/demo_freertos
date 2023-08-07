@@ -48,9 +48,9 @@
 
 /* USER CODE END Variables */
 osThreadId Task_mainHandle;
-osThreadId myTaskLEDHandle;
-osThreadId myTask03Handle;
-osThreadId myTask04Handle;
+osThreadId myTaskLED1Handle;
+osThreadId myTaskLED2Handle;
+osThreadId myTaskKeyHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -58,9 +58,9 @@ osThreadId myTask04Handle;
 /* USER CODE END FunctionPrototypes */
 
 void Task_main_Start(void const * argument);
-void StartTaskLED(void const * argument);
-void StartTask03(void const * argument);
-void StartTask04(void const * argument);
+void StartTaskLED1(void const * argument);
+void StartTaskLED2(void const * argument);
+void StartTaskKey(void const * argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
@@ -114,17 +114,17 @@ void MX_FREERTOS_Init(void) {
   osThreadDef(Task_main, Task_main_Start, osPriorityNormal, 0, 128);
   Task_mainHandle = osThreadCreate(osThread(Task_main), NULL);
 
-  /* definition and creation of myTaskLED */
-  osThreadDef(myTaskLED, StartTaskLED, osPriorityLow, 0, 128);
-  myTaskLEDHandle = osThreadCreate(osThread(myTaskLED), NULL);
+  /* definition and creation of myTaskLED1 */
+  osThreadDef(myTaskLED1, StartTaskLED1, osPriorityLow, 0, 128);
+  myTaskLED1Handle = osThreadCreate(osThread(myTaskLED1), NULL);
 
-  /* definition and creation of myTask03 */
-  osThreadDef(myTask03, StartTask03, osPriorityLow, 0, 128);
-  myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
+  /* definition and creation of myTaskLED2 */
+  osThreadDef(myTaskLED2, StartTaskLED2, osPriorityLow, 0, 128);
+  myTaskLED2Handle = osThreadCreate(osThread(myTaskLED2), NULL);
 
-  /* definition and creation of myTask04 */
-  osThreadDef(myTask04, StartTask04, osPriorityLow, 0, 128);
-  myTask04Handle = osThreadCreate(osThread(myTask04), NULL);
+  /* definition and creation of myTaskKey */
+  osThreadDef(myTaskKey, StartTaskKey, osPriorityLow, 0, 128);
+  myTaskKeyHandle = osThreadCreate(osThread(myTaskKey), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -145,67 +145,85 @@ void Task_main_Start(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-      HAL_GPIO_TogglePin(LD2_GPIO_Port,LD2_Pin);
-      osDelay(500);
+
+      osDelay(1);
   }
   /* USER CODE END Task_main_Start */
 }
 
-/* USER CODE BEGIN Header_StartTaskLED */
+/* USER CODE BEGIN Header_StartTaskLED1 */
 /**
-* @brief Function implementing the myTaskLED thread.
+* @brief Function implementing the myTaskLED1 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTaskLED */
-void StartTaskLED(void const * argument)
+/* USER CODE END Header_StartTaskLED1 */
+void StartTaskLED1(void const * argument)
 {
-  /* USER CODE BEGIN StartTaskLED */
+  /* USER CODE BEGIN StartTaskLED1 */
+  osEvent event;
+
   /* Infinite loop */
   for(;;)
   {
-      HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
-    osDelay(500);
+    event= osSignalWait(0x03,10);
+
+  if(event.status==osEventSignal){
+      if(event.value.signals==0x01){
+          HAL_GPIO_WritePin(LD2_GPIO_Port,LD2_Pin,GPIO_PIN_SET);
+          HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_RESET);
+      }
+
+      if(event.value.signals==0x02){
+          HAL_GPIO_WritePin(LED1_GPIO_Port,LED1_Pin,GPIO_PIN_SET);
+          HAL_GPIO_WritePin(LD2_GPIO_Port,LD2_Pin,GPIO_PIN_RESET);
+      }
   }
-  /* USER CODE END StartTaskLED */
+    osDelay(1);
+  }
+  /* USER CODE END StartTaskLED1 */
 }
 
-/* USER CODE BEGIN Header_StartTask03 */
+/* USER CODE BEGIN Header_StartTaskLED2 */
 /**
-* @brief Function implementing the myTask03 thread.
+* @brief Function implementing the myTaskLED2 thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask03 */
-void StartTask03(void const * argument)
+/* USER CODE END Header_StartTaskLED2 */
+void StartTaskLED2(void const * argument)
 {
-  /* USER CODE BEGIN StartTask03 */
+  /* USER CODE BEGIN StartTaskLED2 */
   /* Infinite loop */
   for(;;)
   {
-      HAL_GPIO_TogglePin(LED2_GPIO_Port,LED2_Pin);
-    osDelay(500);
+    osDelay(1);
   }
-  /* USER CODE END StartTask03 */
+  /* USER CODE END StartTaskLED2 */
 }
 
-/* USER CODE BEGIN Header_StartTask04 */
+/* USER CODE BEGIN Header_StartTaskKey */
 /**
-* @brief Function implementing the myTask04 thread.
+* @brief Function implementing the myTaskKey thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_StartTask04 */
-void StartTask04(void const * argument)
+/* USER CODE END Header_StartTaskKey */
+void StartTaskKey(void const * argument)
 {
-  /* USER CODE BEGIN StartTask04 */
+  /* USER CODE BEGIN StartTaskKey */
   /* Infinite loop */
   for(;;)
   {
-      HAL_GPIO_TogglePin(LED3_GPIO_Port,LED3_Pin);
-    osDelay(500);
+      if(HAL_GPIO_ReadPin(B1_GPIO_Port,B1_Pin)==GPIO_PIN_RESET){
+          osSignalSet(myTaskLED1Handle,0x01);
+      }
+      else{
+          osSignalSet(myTaskLED1Handle,0x02);
+      }
+    osDelay(1);
   }
-  /* USER CODE END StartTask04 */
+  /* USER CODE END StartTaskKey */
 }
 
 /* Private application code --------------------------------------------------*/

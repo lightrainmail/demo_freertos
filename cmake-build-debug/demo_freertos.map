@@ -427,8 +427,8 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
  .text.HAL_GPIO_DeInit
                 0x00000000      0x130 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .text.HAL_GPIO_ReadPin
-                0x00000000        0xe CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .text.HAL_GPIO_TogglePin
+                0x00000000       0x12 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
  .text.HAL_GPIO_LockPin
                 0x00000000       0x2e CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
  .text.HAL_GPIO_EXTI_Callback
@@ -1102,8 +1102,6 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.makeCmsisPriority
                 0x00000000        0xe CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .text.inHandlerMode
-                0x00000000        0xc CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osKernelRunning
                 0x00000000       0x12 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osKernelSysTick
@@ -1126,10 +1124,6 @@ Discarded input sections
                 0x00000000        0x4 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osTimerDelete
                 0x00000000        0x4 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .text.osSignalSet
-                0x00000000       0x64 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .text.osSignalWait
-                0x00000000       0x58 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osMutexCreate
                 0x00000000       0x16 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osMutexWait
@@ -1261,8 +1255,6 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.vPortEndScheduler
                 0x00000000       0x24 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .text.vPortValidateInterruptPriority
-                0x00000000       0x5c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text          0x00000000        0x0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .data          0x00000000        0x0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .bss           0x00000000        0x0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
@@ -1473,12 +1465,6 @@ Discarded input sections
                 0x00000000       0x1c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.ulTaskNotifyTake
                 0x00000000       0x78 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .text.xTaskNotifyWait
-                0x00000000       0x98 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .text.xTaskGenericNotify
-                0x00000000      0x100 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- .text.xTaskGenericNotifyFromISR
-                0x00000000      0x134 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.vTaskNotifyGiveFromISR
                 0x00000000       0xd0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.xTaskNotifyStateClear
@@ -1662,7 +1648,7 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
                 0x08000000                g_pfnVectors
                 0x08000188                . = ALIGN (0x4)
 
-.text           0x08000190     0x3554
+.text           0x08000190     0x398c
                 0x08000190                . = ALIGN (0x4)
  *(.text)
  .text          0x08000190       0x40 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -1675,505 +1661,526 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
                 0x080004d0                __aeabi_ldiv0
  *(.text*)
  .text.Task_main_Start
-                0x080004d4       0x16 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                0x080004d4        0xa CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
                 0x080004d4                Task_main_Start
- .text.StartTaskLED
-                0x080004ea       0x16 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x080004ea                StartTaskLED
- .text.StartTask03
-                0x08000500       0x16 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x08000500                StartTask03
- .text.StartTask04
-                0x08000516       0x16 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x08000516                StartTask04
+ .text.StartTaskLED2
+                0x080004de        0xa CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                0x080004de                StartTaskLED2
+ .text.StartTaskLED1
+                0x080004e8       0x5a CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                0x080004e8                StartTaskLED1
+ *fill*         0x08000542        0x2 
+ .text.StartTaskKey
+                0x08000544       0x38 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                0x08000544                StartTaskKey
  .text.vApplicationGetIdleTaskMemory
-                0x0800052c       0x18 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x0800052c                vApplicationGetIdleTaskMemory
+                0x0800057c       0x18 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                0x0800057c                vApplicationGetIdleTaskMemory
  .text.MX_FREERTOS_Init
-                0x08000544       0xac CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x08000544                MX_FREERTOS_Init
+                0x08000594       0xac CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                0x08000594                MX_FREERTOS_Init
  .text.MX_GPIO_Init
-                0x080005f0       0xb4 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
-                0x080005f0                MX_GPIO_Init
+                0x08000640       0xb4 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
+                0x08000640                MX_GPIO_Init
  .text.HAL_TIM_PeriodElapsedCallback
-                0x080006a4       0x18 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
-                0x080006a4                HAL_TIM_PeriodElapsedCallback
+                0x080006f4       0x18 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+                0x080006f4                HAL_TIM_PeriodElapsedCallback
  .text.Error_Handler
-                0x080006bc        0x4 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
-                0x080006bc                Error_Handler
+                0x0800070c        0x4 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+                0x0800070c                Error_Handler
  .text.SystemClock_Config
-                0x080006c0       0x7a CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
-                0x080006c0                SystemClock_Config
- .text.main     0x0800073a       0x1c CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
-                0x0800073a                main
- *fill*         0x08000756        0x2 
+                0x08000710       0x7a CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+                0x08000710                SystemClock_Config
+ .text.main     0x0800078a       0x1c CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+                0x0800078a                main
+ *fill*         0x080007a6        0x2 
  .text.HAL_MspInit
-                0x08000758       0x40 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
-                0x08000758                HAL_MspInit
+                0x080007a8       0x40 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+                0x080007a8                HAL_MspInit
  .text.HAL_InitTick
-                0x08000798       0xa0 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
-                0x08000798                HAL_InitTick
+                0x080007e8       0xa0 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
+                0x080007e8                HAL_InitTick
  .text.NMI_Handler
-                0x08000838        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x08000838                NMI_Handler
+                0x08000888        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x08000888                NMI_Handler
  .text.HardFault_Handler
-                0x0800083a        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800083a                HardFault_Handler
+                0x0800088a        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800088a                HardFault_Handler
  .text.MemManage_Handler
-                0x0800083c        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800083c                MemManage_Handler
+                0x0800088c        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800088c                MemManage_Handler
  .text.BusFault_Handler
-                0x0800083e        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x0800083e                BusFault_Handler
+                0x0800088e        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x0800088e                BusFault_Handler
  .text.UsageFault_Handler
-                0x08000840        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x08000840                UsageFault_Handler
+                0x08000890        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x08000890                UsageFault_Handler
  .text.DebugMon_Handler
-                0x08000842        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x08000842                DebugMon_Handler
+                0x08000892        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x08000892                DebugMon_Handler
  .text.TIM6_DAC_IRQHandler
-                0x08000844       0x10 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
-                0x08000844                TIM6_DAC_IRQHandler
+                0x08000894       0x10 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+                0x08000894                TIM6_DAC_IRQHandler
  .text.SystemInit
-                0x08000854       0x14 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x08000854                SystemInit
+                0x080008a4       0x14 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x080008a4                SystemInit
  .text.MX_USART2_UART_Init
-                0x08000868       0x38 CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
-                0x08000868                MX_USART2_UART_Init
+                0x080008b8       0x38 CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
+                0x080008b8                MX_USART2_UART_Init
  .text.HAL_UART_MspInit
-                0x080008a0       0x88 CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
-                0x080008a0                HAL_UART_MspInit
+                0x080008f0       0x88 CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
+                0x080008f0                HAL_UART_MspInit
  .text.Reset_Handler
-                0x08000928       0x50 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
-                0x08000928                Reset_Handler
+                0x08000978       0x50 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
+                0x08000978                Reset_Handler
  .text.Default_Handler
-                0x08000978        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
-                0x08000978                RTC_Alarm_IRQHandler
-                0x08000978                EXTI2_IRQHandler
-                0x08000978                TIM8_TRG_COM_IRQHandler
-                0x08000978                TIM8_CC_IRQHandler
-                0x08000978                TIM1_CC_IRQHandler
-                0x08000978                TSC_IRQHandler
-                0x08000978                TAMP_STAMP_IRQHandler
-                0x08000978                EXTI3_IRQHandler
-                0x08000978                LPTIM2_IRQHandler
-                0x08000978                DFSDM1_FLT1_IRQHandler
-                0x08000978                I2C3_ER_IRQHandler
-                0x08000978                DFSDM1_FLT2_IRQHandler
-                0x08000978                EXTI0_IRQHandler
-                0x08000978                I2C2_EV_IRQHandler
-                0x08000978                CAN1_RX0_IRQHandler
-                0x08000978                FPU_IRQHandler
-                0x08000978                TIM1_UP_TIM16_IRQHandler
-                0x08000978                ADC1_2_IRQHandler
-                0x08000978                SPI1_IRQHandler
-                0x08000978                TIM8_UP_IRQHandler
-                0x08000978                DMA2_Channel2_IRQHandler
-                0x08000978                DMA1_Channel4_IRQHandler
-                0x08000978                SAI2_IRQHandler
-                0x08000978                DFSDM1_FLT3_IRQHandler
-                0x08000978                USART3_IRQHandler
-                0x08000978                DMA1_Channel7_IRQHandler
-                0x08000978                CAN1_RX1_IRQHandler
-                0x08000978                LCD_IRQHandler
-                0x08000978                UART5_IRQHandler
-                0x08000978                ADC3_IRQHandler
-                0x08000978                TIM4_IRQHandler
-                0x08000978                DMA2_Channel1_IRQHandler
-                0x08000978                QUADSPI_IRQHandler
-                0x08000978                I2C1_EV_IRQHandler
-                0x08000978                DMA1_Channel6_IRQHandler
-                0x08000978                UART4_IRQHandler
-                0x08000978                DMA2_Channel4_IRQHandler
-                0x08000978                TIM3_IRQHandler
-                0x08000978                RCC_IRQHandler
-                0x08000978                DMA1_Channel1_IRQHandler
-                0x08000978                Default_Handler
-                0x08000978                DMA2_Channel7_IRQHandler
-                0x08000978                EXTI15_10_IRQHandler
-                0x08000978                TIM7_IRQHandler
-                0x08000978                SDMMC1_IRQHandler
-                0x08000978                TIM5_IRQHandler
-                0x08000978                I2C3_EV_IRQHandler
-                0x08000978                EXTI9_5_IRQHandler
-                0x08000978                RTC_WKUP_IRQHandler
-                0x08000978                PVD_PVM_IRQHandler
-                0x08000978                SPI2_IRQHandler
-                0x08000978                CAN1_TX_IRQHandler
-                0x08000978                DMA2_Channel5_IRQHandler
-                0x08000978                DMA1_Channel5_IRQHandler
-                0x08000978                EXTI4_IRQHandler
-                0x08000978                RNG_IRQHandler
-                0x08000978                TIM1_TRG_COM_TIM17_IRQHandler
-                0x08000978                DMA1_Channel3_IRQHandler
-                0x08000978                COMP_IRQHandler
-                0x08000978                WWDG_IRQHandler
-                0x08000978                LPUART1_IRQHandler
-                0x08000978                DMA2_Channel6_IRQHandler
-                0x08000978                TIM2_IRQHandler
-                0x08000978                EXTI1_IRQHandler
-                0x08000978                USART2_IRQHandler
-                0x08000978                DFSDM1_FLT0_IRQHandler
-                0x08000978                I2C2_ER_IRQHandler
-                0x08000978                DMA1_Channel2_IRQHandler
-                0x08000978                TIM8_BRK_IRQHandler
-                0x08000978                CAN1_SCE_IRQHandler
-                0x08000978                FLASH_IRQHandler
-                0x08000978                USART1_IRQHandler
-                0x08000978                OTG_FS_IRQHandler
-                0x08000978                SPI3_IRQHandler
-                0x08000978                I2C1_ER_IRQHandler
-                0x08000978                FMC_IRQHandler
-                0x08000978                SWPMI1_IRQHandler
-                0x08000978                LPTIM1_IRQHandler
-                0x08000978                SAI1_IRQHandler
-                0x08000978                DMA2_Channel3_IRQHandler
-                0x08000978                TIM1_BRK_TIM15_IRQHandler
- *fill*         0x0800097a        0x2 
+                0x080009c8        0x2 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
+                0x080009c8                RTC_Alarm_IRQHandler
+                0x080009c8                EXTI2_IRQHandler
+                0x080009c8                TIM8_TRG_COM_IRQHandler
+                0x080009c8                TIM8_CC_IRQHandler
+                0x080009c8                TIM1_CC_IRQHandler
+                0x080009c8                TSC_IRQHandler
+                0x080009c8                TAMP_STAMP_IRQHandler
+                0x080009c8                EXTI3_IRQHandler
+                0x080009c8                LPTIM2_IRQHandler
+                0x080009c8                DFSDM1_FLT1_IRQHandler
+                0x080009c8                I2C3_ER_IRQHandler
+                0x080009c8                DFSDM1_FLT2_IRQHandler
+                0x080009c8                EXTI0_IRQHandler
+                0x080009c8                I2C2_EV_IRQHandler
+                0x080009c8                CAN1_RX0_IRQHandler
+                0x080009c8                FPU_IRQHandler
+                0x080009c8                TIM1_UP_TIM16_IRQHandler
+                0x080009c8                ADC1_2_IRQHandler
+                0x080009c8                SPI1_IRQHandler
+                0x080009c8                TIM8_UP_IRQHandler
+                0x080009c8                DMA2_Channel2_IRQHandler
+                0x080009c8                DMA1_Channel4_IRQHandler
+                0x080009c8                SAI2_IRQHandler
+                0x080009c8                DFSDM1_FLT3_IRQHandler
+                0x080009c8                USART3_IRQHandler
+                0x080009c8                DMA1_Channel7_IRQHandler
+                0x080009c8                CAN1_RX1_IRQHandler
+                0x080009c8                LCD_IRQHandler
+                0x080009c8                UART5_IRQHandler
+                0x080009c8                ADC3_IRQHandler
+                0x080009c8                TIM4_IRQHandler
+                0x080009c8                DMA2_Channel1_IRQHandler
+                0x080009c8                QUADSPI_IRQHandler
+                0x080009c8                I2C1_EV_IRQHandler
+                0x080009c8                DMA1_Channel6_IRQHandler
+                0x080009c8                UART4_IRQHandler
+                0x080009c8                DMA2_Channel4_IRQHandler
+                0x080009c8                TIM3_IRQHandler
+                0x080009c8                RCC_IRQHandler
+                0x080009c8                DMA1_Channel1_IRQHandler
+                0x080009c8                Default_Handler
+                0x080009c8                DMA2_Channel7_IRQHandler
+                0x080009c8                EXTI15_10_IRQHandler
+                0x080009c8                TIM7_IRQHandler
+                0x080009c8                SDMMC1_IRQHandler
+                0x080009c8                TIM5_IRQHandler
+                0x080009c8                I2C3_EV_IRQHandler
+                0x080009c8                EXTI9_5_IRQHandler
+                0x080009c8                RTC_WKUP_IRQHandler
+                0x080009c8                PVD_PVM_IRQHandler
+                0x080009c8                SPI2_IRQHandler
+                0x080009c8                CAN1_TX_IRQHandler
+                0x080009c8                DMA2_Channel5_IRQHandler
+                0x080009c8                DMA1_Channel5_IRQHandler
+                0x080009c8                EXTI4_IRQHandler
+                0x080009c8                RNG_IRQHandler
+                0x080009c8                TIM1_TRG_COM_TIM17_IRQHandler
+                0x080009c8                DMA1_Channel3_IRQHandler
+                0x080009c8                COMP_IRQHandler
+                0x080009c8                WWDG_IRQHandler
+                0x080009c8                LPUART1_IRQHandler
+                0x080009c8                DMA2_Channel6_IRQHandler
+                0x080009c8                TIM2_IRQHandler
+                0x080009c8                EXTI1_IRQHandler
+                0x080009c8                USART2_IRQHandler
+                0x080009c8                DFSDM1_FLT0_IRQHandler
+                0x080009c8                I2C2_ER_IRQHandler
+                0x080009c8                DMA1_Channel2_IRQHandler
+                0x080009c8                TIM8_BRK_IRQHandler
+                0x080009c8                CAN1_SCE_IRQHandler
+                0x080009c8                FLASH_IRQHandler
+                0x080009c8                USART1_IRQHandler
+                0x080009c8                OTG_FS_IRQHandler
+                0x080009c8                SPI3_IRQHandler
+                0x080009c8                I2C1_ER_IRQHandler
+                0x080009c8                FMC_IRQHandler
+                0x080009c8                SWPMI1_IRQHandler
+                0x080009c8                LPTIM1_IRQHandler
+                0x080009c8                SAI1_IRQHandler
+                0x080009c8                DMA2_Channel3_IRQHandler
+                0x080009c8                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x080009ca        0x2 
  .text.HAL_Init
-                0x0800097c       0x2c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
-                0x0800097c                HAL_Init
+                0x080009cc       0x2c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+                0x080009cc                HAL_Init
  .text.HAL_IncTick
-                0x080009a8       0x18 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
-                0x080009a8                HAL_IncTick
+                0x080009f8       0x18 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+                0x080009f8                HAL_IncTick
  .text.HAL_GetTick
-                0x080009c0        0xc CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
-                0x080009c0                HAL_GetTick
+                0x08000a10        0xc CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+                0x08000a10                HAL_GetTick
  .text.HAL_NVIC_SetPriorityGrouping
-                0x080009cc       0x24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
-                0x080009cc                HAL_NVIC_SetPriorityGrouping
+                0x08000a1c       0x24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+                0x08000a1c                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x080009f0       0x70 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
-                0x080009f0                HAL_NVIC_SetPriority
+                0x08000a40       0x70 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+                0x08000a40                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x08000a60       0x1c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
-                0x08000a60                HAL_NVIC_EnableIRQ
+                0x08000ab0       0x1c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+                0x08000ab0                HAL_NVIC_EnableIRQ
  .text.HAL_GPIO_Init
-                0x08000a7c      0x200 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
-                0x08000a7c                HAL_GPIO_Init
+                0x08000acc      0x200 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+                0x08000acc                HAL_GPIO_Init
+ .text.HAL_GPIO_ReadPin
+                0x08000ccc        0xe CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+                0x08000ccc                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x08000c7c        0xa CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
-                0x08000c7c                HAL_GPIO_WritePin
- .text.HAL_GPIO_TogglePin
-                0x08000c86       0x12 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
-                0x08000c86                HAL_GPIO_TogglePin
+                0x08000cda        0xa CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+                0x08000cda                HAL_GPIO_WritePin
  .text.HAL_PWREx_GetVoltageRange
-                0x08000c98       0x10 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
-                0x08000c98                HAL_PWREx_GetVoltageRange
+                0x08000ce4       0x10 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+                0x08000ce4                HAL_PWREx_GetVoltageRange
  .text.HAL_PWREx_ControlVoltageScaling
-                0x08000ca8       0x90 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
-                0x08000ca8                HAL_PWREx_ControlVoltageScaling
+                0x08000cf4       0x90 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+                0x08000cf4                HAL_PWREx_ControlVoltageScaling
  .text.RCC_SetFlashLatencyFromMSIRange
-                0x08000d38       0x90 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x08000d84       0x90 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
  .text.HAL_RCC_GetSysClockFreq
-                0x08000dc8       0xb4 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x08000dc8                HAL_RCC_GetSysClockFreq
+                0x08000e14       0xb4 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x08000e14                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_OscConfig
-                0x08000e7c      0x61c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x08000e7c                HAL_RCC_OscConfig
+                0x08000ec8      0x61c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x08000ec8                HAL_RCC_OscConfig
  .text.HAL_RCC_ClockConfig
-                0x08001498      0x188 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x08001498                HAL_RCC_ClockConfig
+                0x080014e4      0x188 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x080014e4                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x08001620        0xc CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x08001620                HAL_RCC_GetHCLKFreq
+                0x0800166c        0xc CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x0800166c                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x0800162c       0x24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x0800162c                HAL_RCC_GetPCLK1Freq
+                0x08001678       0x24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x08001678                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x08001650       0x24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x08001650                HAL_RCC_GetPCLK2Freq
+                0x0800169c       0x24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x0800169c                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_GetClockConfig
-                0x08001674       0x3c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
-                0x08001674                HAL_RCC_GetClockConfig
+                0x080016c0       0x3c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+                0x080016c0                HAL_RCC_GetClockConfig
  .text.RCCEx_PLLSAI1_Config
-                0x080016b0      0x170 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+                0x080016fc      0x170 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
  .text.RCCEx_PLLSAI2_Config
-                0x08001820      0x14c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+                0x0800186c      0x14c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x0800196c      0x454 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
-                0x0800196c                HAL_RCCEx_PeriphCLKConfig
+                0x080019b8      0x454 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+                0x080019b8                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_TIM_Base_MspInit
-                0x08001dc0        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001dc0                HAL_TIM_Base_MspInit
- *fill*         0x08001dc2        0x2 
+                0x08001e0c        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001e0c                HAL_TIM_Base_MspInit
+ *fill*         0x08001e0e        0x2 
  .text.HAL_TIM_Base_Start_IT
-                0x08001dc4       0x8c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001dc4                HAL_TIM_Base_Start_IT
+                0x08001e10       0x8c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001e10                HAL_TIM_Base_Start_IT
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x08001e50        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001e50                HAL_TIM_OC_DelayElapsedCallback
+                0x08001e9c        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001e9c                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x08001e52        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001e52                HAL_TIM_IC_CaptureCallback
+                0x08001e9e        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001e9e                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x08001e54        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001e54                HAL_TIM_PWM_PulseFinishedCallback
+                0x08001ea0        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001ea0                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x08001e56        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001e56                HAL_TIM_TriggerCallback
+                0x08001ea2        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001ea2                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x08001e58      0x17a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001e58                HAL_TIM_IRQHandler
- *fill*         0x08001fd2        0x2 
+                0x08001ea4      0x17a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08001ea4                HAL_TIM_IRQHandler
+ *fill*         0x0800201e        0x2 
  .text.TIM_Base_SetConfig
-                0x08001fd4       0xc8 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x08001fd4                TIM_Base_SetConfig
+                0x08002020       0xc8 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x08002020                TIM_Base_SetConfig
  .text.HAL_TIM_Base_Init
-                0x0800209c       0x60 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
-                0x0800209c                HAL_TIM_Base_Init
+                0x080020e8       0x60 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+                0x080020e8                HAL_TIM_Base_Init
  .text.HAL_TIMEx_CommutCallback
-                0x080020fc        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
-                0x080020fc                HAL_TIMEx_CommutCallback
+                0x08002148        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+                0x08002148                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x080020fe        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
-                0x080020fe                HAL_TIMEx_BreakCallback
+                0x0800214a        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+                0x0800214a                HAL_TIMEx_BreakCallback
  .text.HAL_TIMEx_Break2Callback
-                0x08002100        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
-                0x08002100                HAL_TIMEx_Break2Callback
+                0x0800214c        0x2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+                0x0800214c                HAL_TIMEx_Break2Callback
  .text.UART_EndRxTransfer
-                0x08002102       0x52 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                0x0800214e       0x52 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
  .text.UART_SetConfig
-                0x08002154      0x328 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-                0x08002154                UART_SetConfig
+                0x080021a0      0x328 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                0x080021a0                UART_SetConfig
  .text.UART_AdvFeatureConfig
-                0x0800247c       0xca CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-                0x0800247c                UART_AdvFeatureConfig
+                0x080024c8       0xca CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                0x080024c8                UART_AdvFeatureConfig
  .text.UART_WaitOnFlagUntilTimeout
-                0x08002546       0x9a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-                0x08002546                UART_WaitOnFlagUntilTimeout
+                0x08002592       0x9a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                0x08002592                UART_WaitOnFlagUntilTimeout
  .text.UART_CheckIdleState
-                0x080025e0       0xc6 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-                0x080025e0                UART_CheckIdleState
+                0x0800262c       0xc6 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                0x0800262c                UART_CheckIdleState
  .text.HAL_UART_Init
-                0x080026a6       0x62 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
-                0x080026a6                HAL_UART_Init
+                0x080026f2       0x62 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+                0x080026f2                HAL_UART_Init
  .text.makeFreeRtosPriority
-                0x08002708        0xc CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002754        0xc CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .text.inHandlerMode
+                0x08002760        0xc CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
  .text.osKernelStart
-                0x08002714        0xa CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
-                0x08002714                osKernelStart
+                0x0800276c        0xa CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x0800276c                osKernelStart
  .text.osThreadCreate
-                0x0800271e       0x6a CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
-                0x0800271e                osThreadCreate
- .text.osDelay  0x08002788        0xe CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
-                0x08002788                osDelay
+                0x08002776       0x6a CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002776                osThreadCreate
+ .text.osDelay  0x080027e0        0xe CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x080027e0                osDelay
+ .text.osSignalSet
+                0x080027ee       0x64 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x080027ee                osSignalSet
+ .text.osSignalWait
+                0x08002852       0x58 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+                0x08002852                osSignalWait
  .text.vListInitialise
-                0x08002796       0x16 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x08002796                vListInitialise
+                0x080028aa       0x16 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x080028aa                vListInitialise
  .text.vListInitialiseItem
-                0x080027ac        0x6 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x080027ac                vListInitialiseItem
+                0x080028c0        0x6 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x080028c0                vListInitialiseItem
  .text.vListInsertEnd
-                0x080027b2       0x16 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x080027b2                vListInsertEnd
+                0x080028c6       0x16 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x080028c6                vListInsertEnd
  .text.vListInsert
-                0x080027c8       0x32 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x080027c8                vListInsert
+                0x080028dc       0x32 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x080028dc                vListInsert
  .text.uxListRemove
-                0x080027fa       0x26 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
-                0x080027fa                uxListRemove
+                0x0800290e       0x26 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+                0x0800290e                uxListRemove
  .text.prvTaskExitError
-                0x08002820       0x40 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002934       0x40 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.prvPortStartFirstTask
-                0x08002860       0x28 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002974       0x28 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.vPortEnableVFP
-                0x08002888       0x14 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x0800299c       0x14 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
  .text.pxPortInitialiseStack
-                0x0800289c       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x0800289c                pxPortInitialiseStack
- *fill*         0x080028c8        0x8 
+                0x080029b0       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x080029b0                pxPortInitialiseStack
+ *fill*         0x080029dc        0x4 
  .text.SVC_Handler
-                0x080028d0       0x24 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x080028d0                SVC_Handler
+                0x080029e0       0x24 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x080029e0                SVC_Handler
  .text.vPortEnterCritical
-                0x080028f4       0x44 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x080028f4                vPortEnterCritical
+                0x08002a04       0x44 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002a04                vPortEnterCritical
  .text.vPortExitCritical
-                0x08002938       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002938                vPortExitCritical
- *fill*         0x08002964        0xc 
+                0x08002a48       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002a48                vPortExitCritical
+ *fill*         0x08002a74        0xc 
  .text.PendSV_Handler
-                0x08002970       0x64 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002970                PendSV_Handler
+                0x08002a80       0x64 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002a80                PendSV_Handler
  .text.SysTick_Handler
-                0x080029d4       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x080029d4                SysTick_Handler
+                0x08002ae4       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002ae4                SysTick_Handler
  .text.vPortSetupTimerInterrupt
-                0x08002a00       0x28 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002a00                vPortSetupTimerInterrupt
+                0x08002b10       0x28 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002b10                vPortSetupTimerInterrupt
  .text.xPortStartScheduler
-                0x08002a28      0x118 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
-                0x08002a28                xPortStartScheduler
+                0x08002b38      0x118 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002b38                xPortStartScheduler
+ .text.vPortValidateInterruptPriority
+                0x08002c50       0x5c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+                0x08002c50                vPortValidateInterruptPriority
  .text.prvHeapInit
-                0x08002b40       0x68 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08002cac       0x68 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.prvInsertBlockIntoFreeList
-                0x08002ba8       0x64 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08002d14       0x64 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .text.pvPortMalloc
-                0x08002c0c       0xfc CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                0x08002c0c                pvPortMalloc
+                0x08002d78       0xfc CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08002d78                pvPortMalloc
  .text.vPortFree
-                0x08002d08       0x7c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
-                0x08002d08                vPortFree
+                0x08002e74       0x7c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x08002e74                vPortFree
  .text.prvResetNextTaskUnblockTime
-                0x08002d84       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08002ef0       0x2c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvInitialiseNewTask
-                0x08002db0       0xa2 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x08002e52        0x2 
+                0x08002f1c       0xa2 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x08002fbe        0x2 
  .text.prvInitialiseTaskLists
-                0x08002e54       0x68 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08002fc0       0x68 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvAddNewTaskToReadyList
-                0x08002ebc       0xa8 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003028       0xa8 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvDeleteTCB
-                0x08002f64       0x38 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080030d0       0x38 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvCheckTasksWaitingTermination
-                0x08002f9c       0x4c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003108       0x4c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvIdleTask
-                0x08002fe8       0x28 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003154       0x28 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.prvAddCurrentTaskToDelayedList
-                0x08003010       0x98 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800317c       0x98 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
  .text.xTaskCreateStatic
-                0x080030a8       0x76 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080030a8                xTaskCreateStatic
+                0x08003214       0x76 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003214                xTaskCreateStatic
  .text.xTaskCreate
-                0x0800311e       0x68 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800311e                xTaskCreate
- *fill*         0x08003186        0x2 
+                0x0800328a       0x68 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800328a                xTaskCreate
+ *fill*         0x080032f2        0x2 
  .text.vTaskStartScheduler
-                0x08003188       0x74 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003188                vTaskStartScheduler
+                0x080032f4       0x74 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080032f4                vTaskStartScheduler
  .text.vTaskSuspendAll
-                0x080031fc       0x10 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x080031fc                vTaskSuspendAll
+                0x08003368       0x10 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003368                vTaskSuspendAll
  .text.xTaskIncrementTick
-                0x0800320c      0x118 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800320c                xTaskIncrementTick
+                0x08003378      0x118 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003378                xTaskIncrementTick
  .text.xTaskResumeAll
-                0x08003324       0xf8 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003324                xTaskResumeAll
+                0x08003490       0xf8 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003490                xTaskResumeAll
  .text.vTaskDelay
-                0x0800341c       0x4c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x0800341c                vTaskDelay
+                0x08003588       0x4c CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003588                vTaskDelay
  .text.vTaskSwitchContext
-                0x08003468       0x98 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
-                0x08003468                vTaskSwitchContext
+                0x080035d4       0x98 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x080035d4                vTaskSwitchContext
+ .text.xTaskNotifyWait
+                0x0800366c       0x98 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x0800366c                xTaskNotifyWait
+ .text.xTaskGenericNotify
+                0x08003704      0x100 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003704                xTaskGenericNotify
+ .text.xTaskGenericNotifyFromISR
+                0x08003804      0x134 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+                0x08003804                xTaskGenericNotifyFromISR
  .text.__libc_init_array
-                0x08003500       0x48 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-init.o)
-                0x08003500                __libc_init_array
- .text.memset   0x08003548       0xa4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memset.o)
-                0x08003548                memset
+                0x08003938       0x48 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-init.o)
+                0x08003938                __libc_init_array
+ .text.memset   0x08003980       0xa4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-memset.o)
+                0x08003980                memset
  .text.startup.register_fini
-                0x080035ec       0x14 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
- .text.atexit   0x08003600        0xc c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-atexit.o)
-                0x08003600                atexit
+                0x08003a24       0x14 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
+ .text.atexit   0x08003a38        0xc c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-atexit.o)
+                0x08003a38                atexit
  .text.__libc_fini_array
-                0x0800360c       0x2c c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fini.o)
-                0x0800360c                __libc_fini_array
+                0x08003a44       0x2c c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-fini.o)
+                0x08003a44                __libc_fini_array
  .text.__retarget_lock_acquire_recursive
-                0x08003638        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
-                0x08003638                __retarget_lock_acquire_recursive
+                0x08003a70        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
+                0x08003a70                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x0800363c        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
-                0x0800363c                __retarget_lock_release_recursive
+                0x08003a74        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-lock.o)
+                0x08003a74                __retarget_lock_release_recursive
  .text.__register_exitproc
-                0x08003640       0x8c c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__atexit.o)
-                0x08003640                __register_exitproc
+                0x08003a78       0x8c c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__atexit.o)
+                0x08003a78                __register_exitproc
  *(.glue_7)
- .glue_7        0x080036cc        0x0 linker stubs
+ .glue_7        0x08003b04        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080036cc        0x0 linker stubs
+ .glue_7t       0x08003b04        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080036cc        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08003b04        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x080036cc        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080036cc                _init
- .init          0x080036d0        0x8 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08003b04        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08003b04                _init
+ .init          0x08003b08        0x8 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x080036d8        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x080036d8                _fini
- .fini          0x080036dc        0x8 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x080036e4                . = ALIGN (0x4)
-                0x080036e4                _etext = .
+ .fini          0x08003b10        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08003b10                _fini
+ .fini          0x08003b14        0x8 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08003b1c                . = ALIGN (0x4)
+                0x08003b1c                _etext = .
 
-.vfp11_veneer   0x080036e4        0x0
- .vfp11_veneer  0x080036e4        0x0 linker stubs
+.vfp11_veneer   0x08003b1c        0x0
+ .vfp11_veneer  0x08003b1c        0x0 linker stubs
 
-.v4_bx          0x080036e4        0x0
- .v4_bx         0x080036e4        0x0 linker stubs
+.v4_bx          0x08003b1c        0x0
+ .v4_bx         0x08003b1c        0x0 linker stubs
 
-.iplt           0x080036e4        0x0
- .iplt          0x080036e4        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08003b1c        0x0
+ .iplt          0x08003b1c        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x080036e4       0xf4
-                0x080036e4                . = ALIGN (0x4)
+.rodata         0x08003b1c       0xf4
+                0x08003b1c                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x080036e4       0x70 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+ .rodata        0x08003b1c       0x70 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
  *(.rodata*)
  .rodata.str1.4
-                0x08003754       0x2d CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
- *fill*         0x08003781        0x3 
+                0x08003b8c       0x2e CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+ *fill*         0x08003bba        0x2 
  .rodata.AHBPrescTable
-                0x08003784       0x10 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x08003784                AHBPrescTable
+                0x08003bbc       0x10 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x08003bbc                AHBPrescTable
  .rodata.APBPrescTable
-                0x08003794        0x8 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x08003794                APBPrescTable
+                0x08003bcc        0x8 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x08003bcc                APBPrescTable
  .rodata.MSIRangeTable
-                0x0800379c       0x30 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
-                0x0800379c                MSIRangeTable
+                0x08003bd4       0x30 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+                0x08003bd4                MSIRangeTable
  .rodata.vTaskStartScheduler.str1.4
-                0x080037cc        0x5 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
- *fill*         0x080037d1        0x3 
+                0x08003c04        0x5 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x08003c09        0x3 
  .rodata._global_impure_ptr
-                0x080037d4        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-impure.o)
-                0x080037d4                _global_impure_ptr
-                0x080037d8                . = ALIGN (0x4)
+                0x08003c0c        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-impure.o)
+                0x08003c0c                _global_impure_ptr
+                0x08003c10                . = ALIGN (0x4)
 
-.ARM.extab      0x080037d8        0x0
-                0x080037d8                . = ALIGN (0x4)
+.ARM.extab      0x08003c10        0x0
+                0x08003c10                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x080037d8                . = ALIGN (0x4)
+                0x08003c10                . = ALIGN (0x4)
 
-.ARM            0x080037d8        0x8
-                0x080037d8                . = ALIGN (0x4)
-                0x080037d8                __exidx_start = .
+.ARM            0x08003c10        0x8
+                0x08003c10                . = ALIGN (0x4)
+                0x08003c10                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x080037d8        0x8 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x080037e0                __exidx_end = .
-                0x080037e0                . = ALIGN (0x4)
+ .ARM.exidx     0x08003c10        0x8 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08003c18                __exidx_end = .
+                0x08003c18                . = ALIGN (0x4)
 
-.rel.dyn        0x080037e0        0x0
- .rel.iplt      0x080037e0        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08003c18        0x0
+ .rel.iplt      0x08003c18        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.preinit_array  0x080037e0        0x0
-                0x080037e0                . = ALIGN (0x4)
-                0x080037e0                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08003c18        0x0
+                0x08003c18                . = ALIGN (0x4)
+                0x08003c18                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x080037e0                PROVIDE (__preinit_array_end = .)
-                0x080037e0                . = ALIGN (0x4)
+                0x08003c18                PROVIDE (__preinit_array_end = .)
+                0x08003c18                . = ALIGN (0x4)
 
-.init_array     0x080037e0        0x8
-                0x080037e0                . = ALIGN (0x4)
-                0x080037e0                PROVIDE (__init_array_start = .)
+.init_array     0x08003c18        0x8
+                0x08003c18                . = ALIGN (0x4)
+                0x08003c18                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  .init_array.00000
-                0x080037e0        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
+                0x08003c18        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(lib_a-__call_atexit.o)
  *(.init_array*)
- .init_array    0x080037e4        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x080037e8                PROVIDE (__init_array_end = .)
-                0x080037e8                . = ALIGN (0x4)
+ .init_array    0x08003c1c        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08003c20                PROVIDE (__init_array_end = .)
+                0x08003c20                . = ALIGN (0x4)
 
-.fini_array     0x080037e8        0x4
-                0x080037e8                . = ALIGN (0x4)
-                0x080037e8                PROVIDE (__fini_array_start = .)
+.fini_array     0x08003c20        0x4
+                0x08003c20                . = ALIGN (0x4)
+                0x08003c20                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x080037e8        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x080037ec                PROVIDE (__fini_array_end = .)
-                0x080037ec                . = ALIGN (0x4)
-                0x080037ec                _sidata = LOADADDR (.data)
+ .fini_array    0x08003c20        0x4 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08003c24                PROVIDE (__fini_array_end = .)
+                0x08003c24                . = ALIGN (0x4)
+                0x08003c24                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x43c load address 0x080037ec
+.data           0x20000000      0x43c load address 0x08003c24
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -2200,11 +2207,11 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
                 0x2000043c                . = ALIGN (0x4)
                 0x2000043c                _edata = .
 
-.igot.plt       0x2000043c        0x0 load address 0x08003c28
+.igot.plt       0x2000043c        0x0 load address 0x08004060
  .igot.plt      0x2000043c        0x0 c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x2000043c                . = ALIGN (0x4)
 
-.bss            0x2000043c     0x1068 load address 0x08003c28
+.bss            0x2000043c     0x1068 load address 0x08004060
                 0x2000043c                _sbss = .
                 0x2000043c                __bss_start__ = _sbss
  *(.bss)
@@ -2213,15 +2220,15 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
  .bss.Task_mainHandle
                 0x20000458        0x4 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
                 0x20000458                Task_mainHandle
- .bss.myTask03Handle
+ .bss.myTaskKeyHandle
                 0x2000045c        0x4 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x2000045c                myTask03Handle
- .bss.myTask04Handle
+                0x2000045c                myTaskKeyHandle
+ .bss.myTaskLED1Handle
                 0x20000460        0x4 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x20000460                myTask04Handle
- .bss.myTaskLEDHandle
+                0x20000460                myTaskLED1Handle
+ .bss.myTaskLED2Handle
                 0x20000464        0x4 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                0x20000464                myTaskLEDHandle
+                0x20000464                myTaskLED2Handle
  .bss.xIdleStack
                 0x20000468      0x200 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
  .bss.xIdleTaskTCBBuffer
@@ -2303,7 +2310,7 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
                 0x200014a4                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x200014a4      0x604 load address 0x08003c28
+                0x200014a4      0x604 load address 0x08004060
                 0x200014a8                . = ALIGN (0x8)
  *fill*         0x200014a4        0x4 
                 [!provide]                PROVIDE (end = .)
@@ -2402,55 +2409,55 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
 LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard\libgcc.a
 
-.debug_info     0x00000000    0x19eb1
- .debug_info    0x00000000      0x705 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
- .debug_info    0x00000705      0x530 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
- .debug_info    0x00000c35      0xa0b CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
- .debug_info    0x00001640      0x55e CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_info    0x00001b9e      0xd32 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
- .debug_info    0x000028d0      0x723 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_info    0x00002ff3      0x5e0 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_info    0x000035d3      0xdda CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
- .debug_info    0x000043ad       0x22 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
- .debug_info    0x000043cf      0xce8 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
- .debug_info    0x000050b7     0x109e CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
- .debug_info    0x00006155      0x857 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .debug_info    0x000069ac      0xaa2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
- .debug_info    0x0000744e      0xf3f CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
- .debug_info    0x0000838d     0x125c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
- .debug_info    0x000095e9     0x3f24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
- .debug_info    0x0000d50d     0x1d2b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
- .debug_info    0x0000f238     0x529b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
- .debug_info    0x000144d3     0x222d CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_info    0x00016700      0x2e0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_info    0x000169e0      0x587 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_info    0x00016f67      0x5d9 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_info    0x00017540     0x2971 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+.debug_info     0x00000000    0x1a0d2
+ .debug_info    0x00000000      0x926 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+ .debug_info    0x00000926      0x530 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
+ .debug_info    0x00000e56      0xa0b CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+ .debug_info    0x00001861      0x55e CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_info    0x00001dbf      0xd32 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
+ .debug_info    0x00002af1      0x723 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_info    0x00003214      0x5e0 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_info    0x000037f4      0xdda CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
+ .debug_info    0x000045ce       0x22 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
+ .debug_info    0x000045f0      0xce8 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+ .debug_info    0x000052d8     0x109e CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_info    0x00006376      0x857 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_info    0x00006bcd      0xaa2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_info    0x0000766f      0xf3f CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_info    0x000085ae     0x125c CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_info    0x0000980a     0x3f24 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+ .debug_info    0x0000d72e     0x1d2b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+ .debug_info    0x0000f459     0x529b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_info    0x000146f4     0x222d CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_info    0x00016921      0x2e0 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_info    0x00016c01      0x587 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_info    0x00017188      0x5d9 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_info    0x00017761     0x2971 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
-.debug_abbrev   0x00000000     0x2e76
- .debug_abbrev  0x00000000      0x199 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
- .debug_abbrev  0x00000199      0x14e CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x000002e7      0x204 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
- .debug_abbrev  0x000004eb      0x107 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_abbrev  0x000005f2      0x1ff CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
- .debug_abbrev  0x000007f1      0x179 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_abbrev  0x0000096a      0x119 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_abbrev  0x00000a83      0x1eb CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
- .debug_abbrev  0x00000c6e       0x12 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
- .debug_abbrev  0x00000c80      0x22a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
- .debug_abbrev  0x00000eaa      0x36a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
- .debug_abbrev  0x00001214      0x1e6 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .debug_abbrev  0x000013fa      0x215 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
- .debug_abbrev  0x0000160f      0x251 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
- .debug_abbrev  0x00001860      0x275 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
- .debug_abbrev  0x00001ad5      0x232 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
- .debug_abbrev  0x00001d07      0x248 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
- .debug_abbrev  0x00001f4f      0x2d9 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
- .debug_abbrev  0x00002228      0x37f CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_abbrev  0x000025a7      0x106 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_abbrev  0x000026ad      0x26b CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_abbrev  0x00002918      0x24b CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_abbrev  0x00002b63      0x313 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+.debug_abbrev   0x00000000     0x2eac
+ .debug_abbrev  0x00000000      0x1cf CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+ .debug_abbrev  0x000001cf      0x14e CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
+ .debug_abbrev  0x0000031d      0x204 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00000521      0x107 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_abbrev  0x00000628      0x1ff CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
+ .debug_abbrev  0x00000827      0x179 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_abbrev  0x000009a0      0x119 CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_abbrev  0x00000ab9      0x1eb CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
+ .debug_abbrev  0x00000ca4       0x12 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
+ .debug_abbrev  0x00000cb6      0x22a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+ .debug_abbrev  0x00000ee0      0x36a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_abbrev  0x0000124a      0x1e6 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_abbrev  0x00001430      0x215 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_abbrev  0x00001645      0x251 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_abbrev  0x00001896      0x275 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_abbrev  0x00001b0b      0x232 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+ .debug_abbrev  0x00001d3d      0x248 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+ .debug_abbrev  0x00001f85      0x2d9 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_abbrev  0x0000225e      0x37f CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_abbrev  0x000025dd      0x106 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_abbrev  0x000026e3      0x26b CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_abbrev  0x0000294e      0x24b CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_abbrev  0x00002b99      0x313 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
 .debug_loc      0x00000000    0x13ba6
  .debug_loc     0x00000000       0x94 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
@@ -2546,77 +2553,77 @@ LOAD c:/progra~1/gcc-arm-none-eabi-10.3-2021.10/bin/../lib/gcc/arm-none-eabi/10.
  .debug_ranges  0x00001038       0x48 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_ranges  0x00001080      0x280 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
-.debug_line     0x00000000    0x171fa
- .debug_line    0x00000000      0x475 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
- .debug_line    0x00000475      0x270 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
- .debug_line    0x000006e5      0x4be CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
- .debug_line    0x00000ba3      0x211 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
- .debug_line    0x00000db4      0x365 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
- .debug_line    0x00001119      0x2f7 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
- .debug_line    0x00001410      0x30c CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
- .debug_line    0x0000171c      0x3ce CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
- .debug_line    0x00001aea       0xb3 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
- .debug_line    0x00001b9d      0x73b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
- .debug_line    0x000022d8      0x815 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
- .debug_line    0x00002aed      0x740 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
- .debug_line    0x0000322d      0xb7e CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
- .debug_line    0x00003dab      0xf6a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
- .debug_line    0x00004d15     0x159d CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
- .debug_line    0x000062b2     0x5293 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
- .debug_line    0x0000b545     0x1fe2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
- .debug_line    0x0000d527     0x5260 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
- .debug_line    0x00012787     0x1232 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
- .debug_line    0x000139b9      0x3d3 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
- .debug_line    0x00013d8c      0x784 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
- .debug_line    0x00014510      0x7a4 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- .debug_line    0x00014cb4     0x2546 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+.debug_line     0x00000000    0x17219
+ .debug_line    0x00000000      0x494 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+ .debug_line    0x00000494      0x270 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
+ .debug_line    0x00000704      0x4be CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+ .debug_line    0x00000bc2      0x211 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_line    0x00000dd3      0x365 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
+ .debug_line    0x00001138      0x2f7 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_line    0x0000142f      0x30c CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_line    0x0000173b      0x3ce CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
+ .debug_line    0x00001b09       0xb3 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
+ .debug_line    0x00001bbc      0x73b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+ .debug_line    0x000022f7      0x815 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_line    0x00002b0c      0x740 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_line    0x0000324c      0xb7e CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_line    0x00003dca      0xf6a CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_line    0x00004d34     0x159d CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_line    0x000062d1     0x5293 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+ .debug_line    0x0000b564     0x1fe2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+ .debug_line    0x0000d546     0x5260 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_line    0x000127a6     0x1232 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_line    0x000139d8      0x3d3 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_line    0x00013dab      0x784 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_line    0x0001452f      0x7a4 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_line    0x00014cd3     0x2546 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
-.debug_str      0x00000000     0x6bc2
- .debug_str     0x00000000      0x571 CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
-                                0x5f2 (size before relaxing)
- .debug_str     0x00000571      0x208 CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
+.debug_str      0x00000000     0x6bce
+ .debug_str     0x00000000      0x71d CMakeFiles/demo_freertos.elf.dir/Core/Src/freertos.c.obj
+                                0x7b3 (size before relaxing)
+ .debug_str     0x0000071d      0x1da CMakeFiles/demo_freertos.elf.dir/Core/Src/gpio.c.obj
                                 0x418 (size before relaxing)
- .debug_str     0x00000779      0x725 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
+ .debug_str     0x000008f7      0x725 CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj
                                 0x975 (size before relaxing)
- .debug_str     0x00000e9e      0x543 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
+ .debug_str     0x0000101c      0x543 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_msp.c.obj
                                 0x858 (size before relaxing)
- .debug_str     0x000013e1      0x157 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
+ .debug_str     0x0000155f      0x157 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_hal_timebase_tim.c.obj
                                 0xed9 (size before relaxing)
- .debug_str     0x00001538       0xd2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
+ .debug_str     0x000016b6       0xd2 CMakeFiles/demo_freertos.elf.dir/Core/Src/stm32l4xx_it.c.obj
                                 0x791 (size before relaxing)
- .debug_str     0x0000160a      0x11d CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
+ .debug_str     0x00001788      0x11d CMakeFiles/demo_freertos.elf.dir/Core/Src/system_stm32l4xx.c.obj
                                 0x433 (size before relaxing)
- .debug_str     0x00001727      0x542 CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
+ .debug_str     0x000018a5      0x542 CMakeFiles/demo_freertos.elf.dir/Core/Src/usart.c.obj
                                 0xb55 (size before relaxing)
- .debug_str     0x00001c69       0x61 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
+ .debug_str     0x00001de7       0x61 CMakeFiles/demo_freertos.elf.dir/Core/Startup/startup_stm32l476rgtx.s.obj
                                  0xa1 (size before relaxing)
- .debug_str     0x00001cca      0x4e2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
+ .debug_str     0x00001e48      0x4e2 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal.c.obj
                                 0xdb4 (size before relaxing)
- .debug_str     0x000021ac      0x45d CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
+ .debug_str     0x0000232a      0x453 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_cortex.c.obj
                                 0xc7a (size before relaxing)
- .debug_str     0x00002609      0x137 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
+ .debug_str     0x0000277d      0x139 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_gpio.c.obj
                                 0x59a (size before relaxing)
- .debug_str     0x00002740      0x5a0 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000028b6      0x5a0 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_pwr_ex.c.obj
                                 0x8a9 (size before relaxing)
- .debug_str     0x00002ce0      0x1cb CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
+ .debug_str     0x00002e56      0x1cb CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc.c.obj
                                 0x8f6 (size before relaxing)
- .debug_str     0x00002eab      0x322 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
+ .debug_str     0x00003021      0x322 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_rcc_ex.c.obj
                                 0xb15 (size before relaxing)
- .debug_str     0x000031cd      0xf5b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
+ .debug_str     0x00003343      0xf5b CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim.c.obj
                                0x173d (size before relaxing)
- .debug_str     0x00004128      0x6c9 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
+ .debug_str     0x0000429e      0x6c9 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
                                0x1036 (size before relaxing)
- .debug_str     0x000047f1      0x804 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
+ .debug_str     0x00004967      0x804 CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
                                0x106e (size before relaxing)
- .debug_str     0x00004ff5      0xbe3 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+ .debug_str     0x0000516b      0xa79 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
                                0x10a3 (size before relaxing)
- .debug_str     0x00005bd8      0x164 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+ .debug_str     0x00005be4      0x164 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
                                 0x35c (size before relaxing)
- .debug_str     0x00005d3c      0x258 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+ .debug_str     0x00005d48      0x258 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
                                 0x4d8 (size before relaxing)
- .debug_str     0x00005f94      0x2fd CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ .debug_str     0x00005fa0      0x2fd CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
                                 0x56a (size before relaxing)
- .debug_str     0x00006291      0x931 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+ .debug_str     0x0000629d      0x931 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
                                0x1075 (size before relaxing)
 
 .comment        0x00000000       0x49
