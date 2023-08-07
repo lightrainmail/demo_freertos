@@ -37,7 +37,7 @@ CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj: \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Drivers\STM32L4xx_HAL_Driver\Inc/stm32l4xx_hal_tim_ex.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Drivers\STM32L4xx_HAL_Driver\Inc/stm32l4xx_hal_uart.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Drivers\STM32L4xx_HAL_Driver\Inc/stm32l4xx_hal_uart_ex.h \
- C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2/cmsis_os.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS/cmsis_os.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/FreeRTOS.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Core\Inc/FreeRTOSConfig.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/projdefs.h \
@@ -47,7 +47,13 @@ CMakeFiles/demo_freertos.elf.dir/Core/Src/main.c.obj: \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/mpu_wrappers.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/list.h \
- C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2/cmsis_os2.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/task.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/queue.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/semphr.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/queue.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/event_groups.h \
+ C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\include/timers.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Core\Inc/usart.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Core\Inc/main.h \
  C:\Users\14806\OneDrive\Desktop\demo_freertos\Core\Inc/gpio.h

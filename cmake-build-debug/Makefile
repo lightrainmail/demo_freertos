@@ -784,29 +784,29 @@ Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s
 .PHONY : Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s
 
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj
 
 # target to build an object file
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i
 
 # target to preprocess a source file
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
 
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s
 
 # target to generate assembly for a file
-Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
-.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\demo_freertos.elf.dir\build.make CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
+.PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.obj
@@ -1115,9 +1115,9 @@ help:
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.obj
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.i
 	@echo ... Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.s
-	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.obj
-	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.i
-	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.s
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i
+	@echo ... Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/croutine.obj
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/croutine.i
 	@echo ... Middlewares/Third_Party/FreeRTOS/Source/croutine.s

@@ -28,10 +28,10 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/STM32L4xx_HAL_Driver/Inc"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/STM32L4xx_HAL_Driver/Inc/Legacy"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/include"
-  "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/CMSIS/Device/ST/STM32L4xx/Include"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/CMSIS/Include"
+  "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"
   )
 
 # The set of dependency files which are needed:
@@ -63,7 +63,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c" "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj.d"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c" "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj.d"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c" "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj.d"
-  "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj.d"
+  "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj.d"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/croutine.c" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj.d"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj.d"
   "C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/list.c" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj" "gcc" "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj.d"

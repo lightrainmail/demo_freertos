@@ -459,19 +459,19 @@ CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.s"
 	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\14806\OneDrive\Desktop\demo_freertos\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart_ex.c -o CMakeFiles\demo_freertos.elf.dir\Drivers\STM32L4xx_HAL_Driver\Src\stm32l4xx_hal_uart_ex.c.s
 
-CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: CMakeFiles/demo_freertos.elf.dir/flags.make
-CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c
-CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj: CMakeFiles/demo_freertos.elf.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\14806\OneDrive\Desktop\demo_freertos\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj"
-	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj -MF CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c.obj.d -o CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c.obj -c C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c
+CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: CMakeFiles/demo_freertos.elf.dir/flags.make
+CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
+CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj: CMakeFiles/demo_freertos.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\14806\OneDrive\Desktop\demo_freertos\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj"
+	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj -MF CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.obj.d -o CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.obj -c C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c
 
-CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.i"
-	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c > CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c.i
+CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i"
+	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c > CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.i
 
-CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.s"
-	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c -o CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS_V2\cmsis_os2.c.s
+CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s"
+	C:\PROGRA~1\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\14806\OneDrive\Desktop\demo_freertos\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c -o CMakeFiles\demo_freertos.elf.dir\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c.s
 
 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: CMakeFiles/demo_freertos.elf.dir/flags.make
 CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj: C:/Users/14806/OneDrive/Desktop/demo_freertos/Middlewares/Third_Party/FreeRTOS/Source/croutine.c
@@ -629,7 +629,7 @@ demo_freertos_elf_OBJECTS = \
 "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj" \
 "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj" \
 "CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj" \
-"CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj" \
+"CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj" \
 "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj" \
 "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj" \
 "CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj" \
@@ -671,7 +671,7 @@ demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver
 demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_tim_ex.c.obj
 demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart.c.obj
 demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_uart_ex.c.obj
-demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c.obj
+demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
 demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
 demo_freertos.elf: CMakeFiles/demo_freertos.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
